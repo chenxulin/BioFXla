@@ -1,0 +1,3 @@
+[submodule "tools/REINVENT4"]
+	path = tools/REINVENT4
+	url = https://github.com/MolecularAI/REINVENT4.git
