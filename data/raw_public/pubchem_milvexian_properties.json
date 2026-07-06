@@ -1,0 +1,14 @@
+{
+  "PropertyTable": {
+    "Properties": [
+      {
+        "CID": 118277544,
+        "SMILES": "C[C@@H]1CCC[C@@H](C2=NC=CC(=C2)C3=C(C=NN3C(F)F)NC1=O)N4C=NC(=CC4=O)C5=C(C=CC(=C5)Cl)N6C=C(N=N6)Cl",
+        "ConnectivitySMILES": "CC1CCCC(C2=NC=CC(=C2)C3=C(C=NN3C(F)F)NC1=O)N4C=NC(=CC4=O)C5=C(C=CC(=C5)Cl)N6C=C(N=N6)Cl",
+        "InChIKey": "FSWFYCYPTDLKON-CMJOXMDJSA-N",
+        "IUPACName": "(9R,13S)-13-[4-[5-chloro-2-(4-chlorotriazol-1-yl)phenyl]-6-oxopyrimidin-1-yl]-3-(difluoromethyl)-9-methyl-3,4,7,15-tetrazatricyclo[12.3.1.02,6]octadeca-1(18),2(6),4,14,16-pentaen-8-one",
+        "Title": "Milvexian"
+      }
+    ]
+  }
+}

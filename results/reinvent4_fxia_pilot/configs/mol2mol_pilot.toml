@@ -1,0 +1,12 @@
+run_type = "sampling"
+device = "cpu"
+json_out_config = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/mol2mol_pilot.json"
+
+[parameters]
+model_file = "/data/cxl/BioFXla/tools/REINVENT4/priors/pubchem_ecfp4_with_count_with_rank_reinvent4_dict_voc.prior"
+smiles_file = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/mol2mol/fxia_mol2mol_pilot.smi"
+sample_strategy = "beamsearch"
+output_file = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/mol2mol/mol2mol_pilot.csv"
+num_smiles = 25
+unique_molecules = true
+randomize_smiles = true

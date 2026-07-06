@@ -1,0 +1,10 @@
+run_type = "sampling"
+device = "cuda:0"
+json_out_config = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/reinvent_denovo_scale.json"
+
+[parameters]
+model_file = "/data/cxl/BioFXla/tools/REINVENT4/priors/reinvent_pubchem.prior"
+output_file = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/raw_scale/reinvent_denovo_scale.csv"
+num_smiles = 100000
+unique_molecules = true
+randomize_smiles = true

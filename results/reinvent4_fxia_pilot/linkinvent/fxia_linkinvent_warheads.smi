@@ -1,0 +1,9 @@
+*c1ccc2[nH]c(=O)cc(O)c2c1|*N1CCN(C)CC1
+*c1ccc(Cl)c(F)c1C1=CC(=O)N([C@H]2CCC[C@@H](C)C(=O)Nc3ccccc3-c3ccnc2c3)CC1|*n1cnnn1
+*N1CCC2(CC1)CCN(C)C2=O|*n1cnnn1
+*c1ccc([C@H]2CCCCC(=O)Nc3ccc(F)cc3-c3cccc2c3)[n+]([O-])c1|*n1cnnn1
+*c1cnnn1C|*n1cnnn1
+*c1ccc(F)cc1|*c1cnnn1C
+*c1ccc(N)nc1|*n1cnnn1
+*[C@H]1CC(c2cccc(Cl)c2F)=NO1|*CCCC[C@H](N)C(=O)O
+*c1ccccc1|*n1cnnn1

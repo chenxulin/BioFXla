@@ -1,0 +1,14 @@
+{
+  "PropertyTable": {
+    "Properties": [
+      {
+        "CID": 135206011,
+        "SMILES": "CC[C@@H](C(=O)NC1=CC(=C(C=C1)C(=O)N)F)N2C=C(C(=CC2=O)C3=C(C=CC(=C3)Cl)N4C=C(N=N4)C(F)(F)F)OC",
+        "ConnectivitySMILES": "CCC(C(=O)NC1=CC(=C(C=C1)C(=O)N)F)N2C=C(C(=CC2=O)C3=C(C=CC(=C3)Cl)N4C=C(N=N4)C(F)(F)F)OC",
+        "InChIKey": "XYWIPYBIIRTJMM-IBGZPJMESA-N",
+        "IUPACName": "4-[[(2S)-2-[4-[5-chloro-2-[4-(trifluoromethyl)triazol-1-yl]phenyl]-5-methoxy-2-oxo-1-pyridinyl]butanoyl]amino]-2-fluorobenzamide",
+        "Title": "Asundexian"
+      }
+    ]
+  }
+}

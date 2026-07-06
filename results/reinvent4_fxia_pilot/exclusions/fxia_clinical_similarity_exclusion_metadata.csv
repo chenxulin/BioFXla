@@ -1,0 +1,3 @@
+molecule_id,name,synonyms,parent_smiles,parent_inchi_key,source_url,notes
+CHEMBL4112929,MILVEXIAN,,C[C@@H]1CCC[C@H](n2cnc(-c3cc(Cl)ccc3-n3cc(Cl)nn3)cc2=O)c2cc(ccn2)-c2c(cnn2C(F)F)NC1=O,FSWFYCYPTDLKON-CMJOXMDJSA-N,https://www.ebi.ac.uk/chembl/activity_report_card/17791791,
+CHEMBL5427131,,,CC[C@@H](C(=O)Nc1ccc(C(N)=O)c(F)c1)n1cc(OC)c(-c2cc(Cl)ccc2-n2cc(C(F)(F)F)nn2)cc1=O,XYWIPYBIIRTJMM-IBGZPJMESA-N,https://www.ebi.ac.uk/chembl/activity_report_card/25530106,

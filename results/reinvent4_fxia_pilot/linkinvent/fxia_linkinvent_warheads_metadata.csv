@@ -1,0 +1,10 @@
+warhead_pair,source_molecule_id,source_activity_nm,confidence,notes
+*c1ccc2[nH]c(=O)cc(O)c2c1|*N1CCN(C)CC1,CHEMBL3580759,0.04,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*c1ccc(Cl)c(F)c1C1=CC(=O)N([C@H]2CCC[C@@H](C)C(=O)Nc3ccccc3-c3ccnc2c3)CC1|*n1cnnn1,CHEMBL4112773,0.05,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*N1CCC2(CC1)CCN(C)C2=O|*n1cnnn1,CHEMBL4068445,0.07,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*c1ccc([C@H]2CCCCC(=O)Nc3ccc(F)cc3-c3cccc2c3)[n+]([O-])c1|*n1cnnn1,CHEMBL5778140,0.09,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*c1cnnn1C|*n1cnnn1,CHEMBL5175227,0.12,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*c1ccc(F)cc1|*c1cnnn1C,CHEMBL5204065,0.13,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*c1ccc(N)nc1|*n1cnnn1,CHEMBL6167004,0.13,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*[C@H]1CC(c2cccc(Cl)c2F)=NO1|*CCCC[C@H](N)C(=O)O,CHEMBL6008405,0.16,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up
+*c1ccccc1|*n1cnnn1,CHEMBL6044161,0.16,low,BRICS-derived LinkInvent pair; requires binding-mode and synthetic review before scale-up

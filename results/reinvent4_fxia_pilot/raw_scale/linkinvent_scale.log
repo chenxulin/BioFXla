@@ -1,0 +1,57 @@
+12:24:33 <INFO> Started REINVENT 4.8.24 (C) AstraZeneca 2017, 2023 on 2026-07-06
+12:24:33 <INFO> Command line: /data/cxl/miniforge3/envs/aidd/bin/reinvent -d cuda:2 -l results/reinvent4_fxia_pilot/raw_scale/linkinvent_scale.log results/reinvent4_fxia_pilot/configs/linkinvent_scale.toml
+12:24:33 <INFO> Reading run configuration from /data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/linkinvent_scale.toml using format toml
+12:24:33 <INFO> User cxl on host sjyxxkxyjs
+12:24:33 <INFO> Python version 3.11.0
+12:24:33 <INFO> PyTorch version 2.12.0+cu126 git 7661cd9c6b841b62b7f411aa52ec51f05457263b
+12:24:34 <INFO> PyTorch compiled with CUDA version 12.6
+12:24:34 <INFO> RDKit version 2026.03.3
+12:24:34 <INFO> Platform Linux-6.8.0-124-generic-x86_64-with-glibc2.35
+12:24:34 <INFO> CUDA driver version 580.159.03
+12:24:34 <INFO> Number of PyTorch CUDA devices 8
+12:24:34 <INFO> Using GPU device:0 NVIDIA A100-SXM4-40GB
+12:24:35 <INFO> GPU memory: 19126 MiB free, 40440 MiB total
+12:24:35 <INFO> Writing JSON config file to /data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/linkinvent_scale.json
+12:24:35 <INFO> Starting Sampling
+12:24:35 <INFO> /data/cxl/BioFXla/tools/REINVENT4/priors/linkinvent.prior has valid hash:
+{ 'comments': ['prior from DOI:10.1039/D2DD00115B'],
+  'creation_date': 1764760392.5203488,
+  'date_format': 'UNIX epoch',
+  'hash_id': 'ae4aaecbe62582ccfbdb29e7f874d88d',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.5.0',
+  'model_id': 'def39561b58f4271a2b6adc4492527de',
+  'model_id_format': 'uuid.uuid4 3.12.12',
+  'origina_data_source': 'ChEMBL 27',
+  'updates': []}
+12:24:36 <INFO> Number of network parameters: 23,686,180
+12:24:36 <INFO> Network architecture:
+EncoderDecoder(
+  (_encoder): Encoder(
+    (_embedding): Sequential(
+      (0): Embedding(37, 512)
+      (1): Dropout(p=0, inplace=False)
+    )
+    (_rnn): LSTM(512, 512, num_layers=3, batch_first=True, bidirectional=True)
+  )
+  (_decoder): Decoder(
+    (_embedding): Sequential(
+      (0): Embedding(36, 512)
+      (1): Dropout(p=0, inplace=False)
+    )
+    (_rnn): LSTM(512, 512, num_layers=3, batch_first=True)
+    (_attention): AttentionLayer(
+      (_attention_linear): Sequential(
+        (0): Linear(in_features=1024, out_features=512, bias=True)
+        (1): Tanh()
+      )
+    )
+    (_linear): Linear(in_features=512, out_features=36, bias=True)
+  )
+)
+12:24:36 <INFO> Using generator Linkinvent
+12:24:36 <INFO> Writing sampled SMILES to CSV file /data/cxl/BioFXla/results/reinvent4_fxia_pilot/raw_scale/linkinvent_scale.csv
+12:24:36 <INFO> Sampling 90000 SMILES from model /data/cxl/BioFXla/tools/REINVENT4/priors/linkinvent.prior
+12:49:40 <INFO> Removed 39122 invalid SMILES
+12:49:40 <INFO> Peak main memory usage: 3661.977 MiB
+12:49:40 <INFO> Peak reserved GPU memory usage: 0.000 MiB
+12:49:40 <INFO> Finished REINVENT on 2026-07-06

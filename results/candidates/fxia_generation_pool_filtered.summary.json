@@ -1,0 +1,24 @@
+{
+  "input_rows": 249570,
+  "passing_rows": 37690,
+  "merged_rows": 37690,
+  "output_csv": "/data/cxl/BioFXla/results/candidates/fxia_generation_pool_filtered.csv",
+  "inputs": [
+    {
+      "source_model": "mol2mol",
+      "path": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/filtered_scale/mol2mol_scale/mol2mol_scale_filtered.csv"
+    },
+    {
+      "source_model": "libinvent",
+      "path": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/filtered_scale/libinvent_scale/libinvent_scale_filtered.csv"
+    },
+    {
+      "source_model": "linkinvent",
+      "path": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/filtered_scale/linkinvent_scale/linkinvent_scale_filtered.csv"
+    },
+    {
+      "source_model": "reinvent_denovo",
+      "path": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/filtered_scale/reinvent_denovo_scale/reinvent_denovo_scale_filtered.csv"
+    }
+  ]
+}

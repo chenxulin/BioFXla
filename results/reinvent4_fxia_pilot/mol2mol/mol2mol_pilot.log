@@ -1,0 +1,99 @@
+12:01:06 <INFO> Started REINVENT 4.8.24 (C) AstraZeneca 2017, 2023 on 2026-07-06
+12:01:06 <INFO> Command line: /data/cxl/miniforge3/envs/aidd/bin/reinvent -l results/reinvent4_fxia_pilot/mol2mol/mol2mol_pilot.log results/reinvent4_fxia_pilot/configs/mol2mol_pilot.toml
+12:01:06 <INFO> Reading run configuration from /data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/mol2mol_pilot.toml using format toml
+12:01:06 <INFO> User cxl on host sjyxxkxyjs
+12:01:06 <INFO> Python version 3.11.0
+12:01:06 <INFO> PyTorch version 2.12.0+cu126 git 7661cd9c6b841b62b7f411aa52ec51f05457263b
+12:01:06 <INFO> PyTorch compiled with CUDA version 12.6
+12:01:06 <INFO> RDKit version 2026.03.3
+12:01:06 <INFO> Platform Linux-6.8.0-124-generic-x86_64-with-glibc2.35
+12:01:06 <INFO> CUDA driver version 580.159.03
+12:01:06 <INFO> Number of PyTorch CUDA devices 8
+12:01:06 <INFO> Using CPU x86_64
+12:01:06 <INFO> Writing JSON config file to /data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/mol2mol_pilot.json
+12:01:06 <INFO> Starting Sampling
+12:01:06 <WARN> /data/cxl/BioFXla/tools/REINVENT4/priors/pubchem_ecfp4_with_count_with_rank_reinvent4_dict_voc.prior does not contain metadata
+12:01:07 <INFO> Number of network parameters: 17,713,863
+12:01:07 <INFO> Network architecture:
+EncoderDecoder(
+  (encoder): Encoder(
+    (layers): ModuleList(
+      (0-5): 6 x EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (sublayer): ModuleList(
+          (0-1): 2 x SublayerConnection(
+            (norm): LayerNorm()
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm()
+  )
+  (decoder): Decoder(
+    (layers): ModuleList(
+      (0-5): 6 x DecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (src_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (sublayer): ModuleList(
+          (0-2): 3 x SublayerConnection(
+            (norm): LayerNorm()
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm()
+  )
+  (src_embed): Sequential(
+    (0): Embeddings(
+      (lut): Embedding(455, 256)
+    )
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (tgt_embed): Sequential(
+    (0): Embeddings(
+      (lut): Embedding(455, 256)
+    )
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (generator): Generator(
+    (proj): Linear(in_features=256, out_features=455, bias=True)
+  )
+)
+12:01:07 <INFO> Using generator Mol2Mol
+12:01:07 <INFO> Writing sampled SMILES to CSV file /data/cxl/BioFXla/results/reinvent4_fxia_pilot/mol2mol/mol2mol_pilot.csv
+12:01:07 <WARN> randomize_smiles was set to True but the model was not trained with randomized SMILES.  Setting randomize_smiles to False.
+12:01:07 <INFO> Sampling 1000 SMILES from model /data/cxl/BioFXla/tools/REINVENT4/priors/pubchem_ecfp4_with_count_with_rank_reinvent4_dict_voc.prior
+12:07:41 <INFO> Removed 35 invalid SMILES
+12:07:41 <INFO> Peak main memory usage: 2898.207 MiB
+12:07:41 <INFO> Finished REINVENT on 2026-07-06

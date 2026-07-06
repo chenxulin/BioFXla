@@ -1,0 +1,41 @@
+{
+  "mol2mol_seed_count": 40,
+  "libinvent_template_count": 10,
+  "linkinvent_pair_count": 9,
+  "clinical_exclusion_count": 2,
+  "patent_proxy_exclusion_count": 102,
+  "planned_scale_raw_counts": {
+    "mol2mol": 100000,
+    "libinvent": 100000,
+    "linkinvent": 90000,
+    "reinvent_denovo": 100000
+  },
+  "local_priors": {
+    "mol2mol": "/data/cxl/BioFXla/tools/REINVENT4/priors/pubchem_ecfp4_with_count_with_rank_reinvent4_dict_voc.prior",
+    "libinvent": "/data/cxl/BioFXla/tools/REINVENT4/priors/libinvent.prior",
+    "linkinvent": "/data/cxl/BioFXla/tools/REINVENT4/priors/linkinvent.prior",
+    "reinvent_denovo": "/data/cxl/BioFXla/tools/REINVENT4/priors/reinvent_pubchem.prior"
+  },
+  "input_source_tables": [
+    "/data/cxl/BioFXla/data/processed/fxia_molecule_seed.csv",
+    "/data/cxl/BioFXla/data/processed/fxia_scaffold_seed.csv"
+  ],
+  "outputs": {
+    "mol2mol_pilot_smiles": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/mol2mol/fxia_mol2mol_pilot.smi",
+    "libinvent_scaffolds": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/libinvent/fxia_libinvent_scaffolds.smi",
+    "linkinvent_warheads": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/linkinvent/fxia_linkinvent_warheads.smi",
+    "clinical_exclusion": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/exclusions/fxia_clinical_similarity_exclusion.smi",
+    "patent_proxy_exclusion": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/exclusions/fxia_patent_similarity_exclusion.smi",
+    "mol2mol_pilot_config": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/mol2mol_pilot.toml",
+    "mol2mol_scale_config": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/mol2mol_scale.toml",
+    "libinvent_scale_config": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/libinvent_scale.toml",
+    "linkinvent_scale_config": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/linkinvent_scale.toml",
+    "reinvent_denovo_scale_config": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/reinvent_denovo_scale.toml"
+  },
+  "caveats": [
+    "Clinical candidates are exclusion/calibration anchors only, not direct design templates.",
+    "Patent exclusion set is a public-data proxy until curated patent examples are collected.",
+    "LibInvent and LinkInvent attachment points are heuristic and require medchem/PDB review before scale-up.",
+    "Scale configs are starting points; run only after pilot filtering calibrates thresholds."
+  ]
+}

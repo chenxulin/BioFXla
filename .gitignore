@@ -13,3 +13,12 @@ wheels/
 .codex
 .uv-cache
 .agents
+
+# Runtime caches and generated scratch artifacts
+.pytest_cache/
+tools/REINVENT4/.venv/
+results/**/raw_scale/*.pid
+results/**/raw_scale/*.stdout
+results/**/raw_scale/*.stderr
+results/**/raw_scale/*smoke*
+results/**/raw_scale/*probe*

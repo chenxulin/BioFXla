@@ -1,0 +1,119 @@
+{
+  "input_csv": "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/raw_scale/mol2mol_scale.csv",
+  "total_rows": 73853,
+  "valid_rows": 73853,
+  "invalid_rows": 0,
+  "unique_parent_inchikeys": 73077,
+  "duplicate_parent_inchikey_rows": 776,
+  "property_pass_rows": 4834,
+  "clinical_similarity_pass_rows": 67428,
+  "patent_proxy_soft_pass_rows": 67317,
+  "lipinski_rule_of_five_pass_rows": 1256,
+  "hard_filter_pass_rows": 793,
+  "all_filter_pass_rows": 772,
+  "output_prefix": "mol2mol_scale",
+  "thresholds": {
+    "mw_min": 350.0,
+    "mw_max": 650.0,
+    "tpsa_min": 60.0,
+    "tpsa_max": 140.0,
+    "clogp_min": 1.0,
+    "clogp_max": 5.0,
+    "hbd_max": 3,
+    "hba_max": 12,
+    "rotatable_bonds_max": 10,
+    "formal_charge_min": -1,
+    "formal_charge_max": 1,
+    "sa_score_max": 4.0,
+    "lipinski_mw_max": 500.0,
+    "lipinski_clogp_max": 5.0,
+    "lipinski_hbd_max": 5,
+    "lipinski_hba_max": 10,
+    "clinical_similarity_max": 0.45,
+    "patent_proxy_similarity_max": 0.5,
+    "patent_proxy_soft_similarity_max": 0.85
+  },
+  "calibration": {
+    "basis": "property_pass_rows",
+    "recommended_gate": {
+      "mw": [
+        350.0,
+        650.0
+      ],
+      "tpsa": [
+        60.0,
+        140.0
+      ],
+      "clogp": [
+        1.0,
+        5.0
+      ],
+      "formal_charge": [
+        -1,
+        1
+      ],
+      "sa_score_max": 4.0,
+      "clinical_similarity_max": 0.45,
+      "patent_example_similarity_max_when_curated": 0.5,
+      "patent_proxy_soft_similarity_max_for_current_seed_proxy": 0.85
+    },
+    "observed_distribution": {
+      "mw": {
+        "min": 351.193,
+        "p10": 488.954,
+        "median": 532.988,
+        "p90": 585.068,
+        "max": 649.917
+      },
+      "tpsa": {
+        "min": 61.68,
+        "p10": 103.85,
+        "median": 125.94,
+        "p90": 136.94,
+        "max": 139.95
+      },
+      "clogp": {
+        "min": 1.268,
+        "p10": 3.428,
+        "median": 4.253,
+        "p90": 4.837,
+        "max": 5.0
+      },
+      "formal_charge": {
+        "min": -1.0,
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 1.0
+      },
+      "sa_score": {
+        "min": 2.194,
+        "p10": 3.356,
+        "median": 3.597,
+        "p90": 3.904,
+        "max": 4.0
+      },
+      "lipinski_rule_of_five_violations": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 1.0,
+        "p90": 1.0,
+        "max": 2.0
+      },
+      "max_clinical_similarity": {
+        "min": 0.118,
+        "p10": 0.16,
+        "median": 0.256,
+        "p90": 0.368,
+        "max": 0.525
+      },
+      "max_patent_proxy_similarity": {
+        "min": 0.333,
+        "p10": 0.604,
+        "median": 0.732,
+        "p90": 0.833,
+        "max": 1.0
+      }
+    }
+  }
+}

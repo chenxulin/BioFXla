@@ -1,0 +1,8 @@
+{
+  "chembl_activity_rows": 13301,
+  "clinical_representative_rows": 2,
+  "clinical_trial_rows": 34,
+  "murcko_scaffold_clusters": 1668,
+  "pdb_ids_from_chembl_target": 114,
+  "pdb_nonpolymer_ligand_rows": 272
+}

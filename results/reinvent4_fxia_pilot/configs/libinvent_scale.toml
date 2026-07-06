@@ -1,0 +1,13 @@
+run_type = "sampling"
+device = "cuda:0"
+json_out_config = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/configs/libinvent_scale.json"
+
+[parameters]
+model_file = "/data/cxl/BioFXla/tools/REINVENT4/priors/libinvent.prior"
+smiles_file = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/libinvent/fxia_libinvent_scaffolds.smi"
+sample_strategy = "multinomial"
+temperature = 1.0
+output_file = "/data/cxl/BioFXla/results/reinvent4_fxia_pilot/raw_scale/libinvent_scale.csv"
+num_smiles = 10000
+unique_molecules = true
+randomize_smiles = true
