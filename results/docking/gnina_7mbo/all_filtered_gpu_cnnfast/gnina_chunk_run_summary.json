@@ -1,0 +1,15 @@
+{
+  "chunk_count": 76,
+  "devices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "failed_count": 0,
+  "manifest": "/data/cxl/BioFXla/results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/gnina_chunk_run_manifest.csv"
+}

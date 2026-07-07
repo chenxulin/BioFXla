@@ -1,0 +1,32 @@
+{
+  "input_rows": 500,
+  "pose_qc_pass_count": 500,
+  "pose_qc_fail_count": 0,
+  "pose_qc_flag_counts": {
+    "ok": 500
+  },
+  "unique_murcko_scaffolds": 435,
+  "unique_ecfp_clusters": 499,
+  "admet_input_count": 500,
+  "admet_input_unique_murcko_scaffolds": 435,
+  "admet_subset_count": 500,
+  "admet_unique_murcko_scaffolds": 435,
+  "pre_admet_md_subset_count": 0,
+  "pre_admet_md_unique_murcko_scaffolds": 0,
+  "pre_admet_md_source_model_counts": {},
+  "pre_admet_md_top_candidates": [],
+  "input_csv": "results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/fxia_all_filtered_gnina_top_hits.csv",
+  "clustered_csv": "results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/top_hit_selection/top_hits_clustered.csv",
+  "admet_ai_input_csv": "results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/top_hit_selection/top_hits_admet_ai_input.csv",
+  "selection_rules": {
+    "fingerprint": "ECFP4/Morgan radius 2, 2048 bits",
+    "fingerprint_sim_threshold": 0.65,
+    "admet_n": 0,
+    "pre_admet_md_n": 0,
+    "max_per_scaffold_admet": 5,
+    "max_per_scaffold_md": 2,
+    "max_per_cluster_admet": 3,
+    "max_per_cluster_md": 1
+  },
+  "summary_json": "results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/top_hit_selection/top_hits_selection_summary.json"
+}

@@ -1,0 +1,48 @@
+{
+  "input_csv": "results/candidates/fxia_generation_pool_filtered.csv",
+  "input_rows": 37690,
+  "ligands_written": 37683,
+  "ligands_failed": 7,
+  "chunk_size": 500,
+  "chunk_count": 76,
+  "workers": 16,
+  "output_dir": "results/docking/gnina_7mbo/inputs/all_filtered_chunks_full",
+  "manifest_csv": "results/docking/gnina_7mbo/inputs/all_filtered_chunks_full/all_filtered_ligand_manifest.csv",
+  "failed_examples": [
+    {
+      "candidate_id": "FXIA-GEN-007907",
+      "reason": "embed_failed",
+      "smiles": "[O-][n+]1cc(-c2cc(Cl)ccc2-n2cnnn2)ccc1C1=Nc2ccc(F)cc2-c2cccc1c2"
+    },
+    {
+      "candidate_id": "FXIA-GEN-017804",
+      "reason": "embed_failed",
+      "smiles": "CC(=O)c1cc(C(=O)C(C)C)c2ccc3oc(=O)c4cccc(CCCN5CCN(C)CC5)c4c3n12"
+    },
+    {
+      "candidate_id": "FXIA-GEN-018520",
+      "reason": "embed_failed",
+      "smiles": "Nc1nc2c(N)c(n1)-c1c([nH]c3ccc(-c4cccc(-c5ccccn5)c4)cc13)C2"
+    },
+    {
+      "candidate_id": "FXIA-GEN-022635",
+      "reason": "embed_failed",
+      "smiles": "CC(=O)N1CCN(C(C)Cn2c(=O)c3cccc4c3c([N+](=O)[O-])ccc42)CC1"
+    },
+    {
+      "candidate_id": "FXIA-GEN-029289",
+      "reason": "embed_failed",
+      "smiles": "CC(C)CC(=O)N1CCC(n2c3nc4c(Cl)c5cc(F)cc-5c(=O)nc(c42)CCN(C)C3)CC1"
+    },
+    {
+      "candidate_id": "FXIA-GEN-030050",
+      "reason": "embed_failed",
+      "smiles": "C=CCNC(=O)c1cccc(NS(=O)(=O)c2cc3c(C)cc2n2ccc(=O)cc32)c1"
+    },
+    {
+      "candidate_id": "FXIA-GEN-034134",
+      "reason": "embed_failed",
+      "smiles": "CCCCN1c2nc3cc(=O)[nH]cc3c3cc(sc23)C(=O)N1Cc1ccccc1"
+    }
+  ]
+}

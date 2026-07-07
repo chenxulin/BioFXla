@@ -1,4 +1,4 @@
-# FXIa REINVENT4 Pilot Package
+# FXIa REINVENT4 Generation Package
 
 This package is generated from `data/processed/fxia_molecule_seed.csv` and keeps clinical candidates as exclusion/calibration anchors only.
 
@@ -31,4 +31,19 @@ mamba run -n aidd bash scripts/generation/run_reinvent4_scaleup.sh
 
 This repository-level script starts or resumes all four paths, skips paths whose logs already contain `Finished REINVENT`, and writes PID/stdout/stderr files under `raw_scale/`. The generated `run_scaleup_commands.sh` is retained only as provenance for the initial package generation.
 
-Do not treat the scale configs as medicinal chemistry recommendations. Run them only after the pilot output has been filtered for MW, TPSA, cLogP, charge, SA, clinical-candidate similarity, patent-proxy similarity, and reactive/PAINS liabilities.
+## Downstream Status
+
+The scale-up outputs have been filtered and merged into:
+
+```text
+results/candidates/fxia_generation_pool_filtered.csv
+```
+
+That candidate pool has been docked with GNINA, reduced to 500 docking top hits, predicted with ADMET-AI, and ranked into 50 final MD candidates:
+
+```text
+results/admet/admet_ai/top_hits_ranked/top_hits_md_candidates.csv
+results/admet/admet_ai/top_hits_ranked/top_hits_md_candidates.sdf
+```
+
+Do not treat the generation configs or generated molecules as medicinal chemistry recommendations. The retained molecules are computational hypotheses after property, similarity, docking, and ADMET-AI triage.

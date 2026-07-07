@@ -22,3 +22,10 @@ results/**/raw_scale/*.stdout
 results/**/raw_scale/*.stderr
 results/**/raw_scale/*smoke*
 results/**/raw_scale/*probe*
+results/**/run.pid
+results/**/run_stdout.log
+results/docking/**/fxia_candidates_top100*
+results/docking/**/fxia_candidates_top096_100*
+results/docking/**/logs/
+results/docking/**/poses/
+results/docking/**/inputs/all_filtered_chunks_full/*.sdf

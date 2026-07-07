@@ -1,23 +1,34 @@
-不建议现在直接大规模多路径生成，主要不是算力问题，而是输入证据还没到可放大的质量。
-当前我们有的是 seed 数据底座：ChEMBL 活性、Murcko scaffold、PDB metadata、临床 anchor。它能支持“选候选方向”和“验证 REINVENT4 流程”，但还不能可靠支持百万级生成，因为几个关键约束还没闭合：
-专利风险没过滤
-asundexian/milvexian 及大量 Bayer/BMS/Janssen 相关 chemotype 可能很拥挤。现在直接大规模 Mol2Mol/LibInvent，容易生成一堆 patent-near neighbors，后面大批报废。
+# FXIa Molecule Generation And Selection Workflow
 
-选择性证据没接上
-FXIa 必须看 FXa、thrombin、kallikrein、trypsin 等反筛。现在只按 FXIa potency 放大，会偏向泛 serine protease binder，尤其是 amidine/benzamidine 类 S1 binders。
+This note describes the current executable workflow from generated molecules to MD candidates.
 
-PDB 还只是 metadata
-我们已有 PDB ligand ID 和 SMILES，但还没解析 S1/S2/S4 occupancy、关键残基、水介导作用和 pose quality。没有这些约束，LinkInvent/de novo scoring 会比较盲。
+## Canonical Flow
 
-scaffold seed 不是最终优先级
-Tier A 只说明公开 ChEMBL 中有强活性记录，不代表有 patent white space、可合成、可生成、可选择性优化。直接多路径会把“活性强但拥挤/不可用”的方向一起放大。
+1. Generate molecules with Mol2Mol, LibInvent, LinkInvent, and REINVENT de novo.
+2. Filter each generation output with RDKit standardization, Lipinski Rule-of-Five, property limits, clinical-candidate similarity, and patent-proxy similarity.
+3. Merge passing molecules into `results/candidates/fxia_generation_pool_filtered.csv`.
+4. Prepare all filtered candidates as GNINA ligand chunks.
+5. Run GNINA on all chunks and merge pose SDF scores into full ranked docking CSVs.
+6. Keep 500 docking top hits after similarity filtering.
+7. Cluster/QC those 500 hits and export a compact ADMET-AI input table.
+8. Run ADMET-AI on all 500 hits.
+9. Rank by GNINA score, ADMET-AI, physicochemical properties, similarity, and scaffold diversity.
+10. Export 50 final MD candidates.
 
-REINVENT4 多路径需要 scoring function 先定好
-大规模生成真正花时间的是后处理：去重、性质过滤、相似度排除、dock/pharmacophore、选择性反筛。没有先跑 pilot 校准阈值，百万级输出会变成很大的噪声池。
+## Main Output Files
 
-我的建议是：不是慢慢做，而是先用 1-2 天级别的 pilot 把闸门调好，再并行放大。比如：
-先选 20-50 个非临床候选代表分子跑 Mol2Mol 小批量。
-同时准备 LibInvent scaffold templates 和 clinical/patent similarity exclusion set。
-用 pilot 输出校准 MW/TPSA/cLogP/charge/SA/similarity 阈值。
-然后再开多路径：Mol2Mol + LibInvent + LinkInvent + REINVENT de novo，每条路径 50k-150k 起步。
-这样最终放大的不是“会生成很多分子”的流程，而是“有机会留下可用分子”的流程。
+- Docking full ranking: `results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/fxia_all_filtered_gnina_ranked.csv`
+- Docking top hits: `results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/fxia_all_filtered_gnina_top_hits.csv`
+- Clustered 500-hit table: `results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/top_hit_selection/top_hits_clustered.csv`
+- ADMET-AI input: `results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/top_hit_selection/top_hits_admet_ai_input.csv`
+- ADMET-AI predictions: `results/admet/admet_ai/top_hits_admet_ai_predictions.csv`
+- ADMET-ranked table: `results/admet/admet_ai/top_hits_ranked/top_hits_admet_ranked.csv`
+- Final MD candidate CSV: `results/admet/admet_ai/top_hits_ranked/top_hits_md_candidates.csv`
+- Final MD candidate SDF: `results/admet/admet_ai/top_hits_ranked/top_hits_md_candidates.sdf`
+
+## Interpretation Notes
+
+- Clinical candidates remain calibration and exclusion anchors, not direct templates.
+- Patent-proxy similarity is technical triage, not a freedom-to-operate conclusion.
+- ADMET-AI predictions are in silico prioritization signals; they do not establish safety or developability.
+- The 50 MD candidates are computational hypotheses and still require pose review before MD setup.

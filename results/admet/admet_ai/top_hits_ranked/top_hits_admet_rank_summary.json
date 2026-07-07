@@ -1,0 +1,163 @@
+{
+  "docking_rows": 500,
+  "admet_rows": 500,
+  "ranked_rows": 500,
+  "missing_admet_count": 0,
+  "missing_admet_candidate_ids": [],
+  "selected_count": 50,
+  "selected_unique_murcko_scaffolds": 49,
+  "selected_unique_ecfp_clusters": 50,
+  "selected_source_model_counts": {
+    "linkinvent": 1,
+    "reinvent_denovo": 49
+  },
+  "admet_risk_count_distribution": {
+    "0": 2,
+    "1": 41,
+    "10": 2,
+    "2": 67,
+    "3": 61,
+    "4": 71,
+    "5": 86,
+    "6": 92,
+    "7": 56,
+    "8": 19,
+    "9": 3
+  },
+  "top10_selected": [
+    {
+      "candidate_id": "FXIA-GEN-008501",
+      "admet_rank": "1",
+      "docking_rank": "48",
+      "composite_score": "0.794935",
+      "cnn_score": "0.978581965",
+      "admet_component_score": "0.808957",
+      "admet_risk_count": "0",
+      "admet_risk_flags": "none",
+      "murcko_scaffold": "c1ccccc1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-035805",
+      "admet_rank": "2",
+      "docking_rank": "222",
+      "composite_score": "0.778288",
+      "cnn_score": "0.9632317424",
+      "admet_component_score": "0.821327",
+      "admet_risk_count": "0",
+      "admet_risk_flags": "none",
+      "murcko_scaffold": "c1ccccc1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-033081",
+      "admet_rank": "3",
+      "docking_rank": "148",
+      "composite_score": "0.734523",
+      "cnn_score": "0.9685468078",
+      "admet_component_score": "0.784143",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "O=C1NCC(NCc2cn[nH]c2)CN1c1ccc2c(c1)OCCO2",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-007794",
+      "admet_rank": "4",
+      "docking_rank": "628",
+      "composite_score": "0.716298",
+      "cnn_score": "0.9434232116",
+      "admet_component_score": "0.808002",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "hERG_ge_0.50",
+      "murcko_scaffold": "O=C(NCC1(c2ccccc2)OCCCO1)C1CCNCC1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-004125",
+      "admet_rank": "5",
+      "docking_rank": "298",
+      "composite_score": "0.714203",
+      "cnn_score": "0.9578062296",
+      "admet_component_score": "0.789155",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "O=c1cc(-c2cccnc2)cn[nH]1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-013225",
+      "admet_rank": "6",
+      "docking_rank": "46",
+      "composite_score": "0.702208",
+      "cnn_score": "0.9790979624",
+      "admet_component_score": "0.735945",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "O=C(Cc1nnc(SCC(=O)Nc2cccs2)[nH]1)NCC1CCCO1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-032661",
+      "admet_rank": "7",
+      "docking_rank": "525",
+      "composite_score": "0.701857",
+      "cnn_score": "0.9473689198",
+      "admet_component_score": "0.770613",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "O=C1Nc2ccccc2CC1S(=O)(=O)c1ccccc1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-004436",
+      "admet_rank": "8",
+      "docking_rank": "420",
+      "composite_score": "0.700387",
+      "cnn_score": "0.9514448643",
+      "admet_component_score": "0.776346",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "O=C(CNC(=O)C1CCCO1)Nc1ccccc1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-033633",
+      "admet_rank": "9",
+      "docking_rank": "453",
+      "composite_score": "0.696403",
+      "cnn_score": "0.9503150582",
+      "admet_component_score": "0.753725",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "c1ccc(-n2nccc2N2CCCCC2)cc1",
+      "source_models": "reinvent_denovo"
+    },
+    {
+      "candidate_id": "FXIA-GEN-035097",
+      "admet_rank": "10",
+      "docking_rank": "242",
+      "composite_score": "0.695350",
+      "cnn_score": "0.9616948366",
+      "admet_component_score": "0.743931",
+      "admet_risk_count": "1",
+      "admet_risk_flags": "DILI_ge_0.50",
+      "murcko_scaffold": "O=C(COC(=O)c1cn[nH]n1)Nc1ccccc1C(=O)NCc1ccco1",
+      "source_models": "reinvent_denovo"
+    }
+  ],
+  "docking_csv": "results/docking/gnina_7mbo/all_filtered_gpu_cnnfast/top_hit_selection/top_hits_clustered.csv",
+  "admet_csv": "results/admet/admet_ai/top_hits_admet_ai_predictions.csv",
+  "ranked_csv": "results/admet/admet_ai/top_hits_ranked/top_hits_admet_ranked.csv",
+  "md_candidates_csv": "results/admet/admet_ai/top_hits_ranked/top_hits_md_candidates.csv",
+  "selection_rules": {
+    "top_n": 50,
+    "max_per_scaffold": 2,
+    "max_per_cluster": 1,
+    "composite_score": "0.35*docking + 0.40*ADMET + 0.15*physchem + 0.10*similarity - ADMET risk penalty",
+    "diversity": "greedy selection after composite ranking by Murcko scaffold and ECFP cluster caps"
+  },
+  "md_candidates_sdf": "results/admet/admet_ai/top_hits_ranked/top_hits_md_candidates.sdf",
+  "md_candidates_sdf_molecules": 50,
+  "summary_json": "results/admet/admet_ai/top_hits_ranked/top_hits_admet_rank_summary.json"
+}

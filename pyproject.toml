@@ -1,7 +1,9 @@
 [project]
 name = "biofxla"
 version = "0.1.0"
-description = "Add your description here"
+description = "FXIa small-molecule generation, filtering, docking, ADMET, and MD candidate triage workflow."
 readme = "README.md"
 requires-python = ">=3.11"
+# Runtime dependencies are provided by the preconfigured `aidd` mamba environment.
+# External tools such as GNINA and REINVENT4 are not pip-installable project dependencies.
 dependencies = []
